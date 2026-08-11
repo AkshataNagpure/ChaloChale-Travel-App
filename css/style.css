@@ -1,0 +1,178 @@
+/* Package Cards Enhancement */
+.package-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.package-card .card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.package-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.package-card .card-body {
+    padding: 1.5rem;
+}
+
+.package-card .card-title {
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.package-card:hover .card-title {
+    color: #007bff;
+}
+
+.package-card .btn-primary {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.package-card .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+    .package-card .card-body {
+        padding: 1rem;
+    }
+    
+    .package-card .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .package-card .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .package-card .list-unstyled li {
+        font-size: 0.85rem;
+    }
+    
+    .package-card .card-footer h4 {
+        font-size: 1.2rem;
+    }
+    
+    .package-card .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .package-card .card-body {
+        padding: 1.25rem;
+    }
+}
+
+/* Badge styling improvements */
+.package-card .badge {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rating stars animation */
+.package-card .fa-star {
+    transition: transform 0.2s ease;
+}
+
+.package-card:hover .fa-star {
+    transform: scale(1.2);
+}
+
+/* Checklist items improvement */
+.package-card .list-unstyled li {
+    transition: all 0.2s ease;
+}
+
+.package-card:hover .list-unstyled li {
+    padding-left: 5px;
+}
+
+/* Smooth loading animation */
+.package-card {
+    animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add staggered animation delay for cards */
+.col-12:nth-child(1) .package-card {
+    animation-delay: 0.1s;
+}
+
+.col-12:nth-child(2) .package-card {
+    animation-delay: 0.2s;
+}
+
+.col-12:nth-child(3) .package-card {
+    animation-delay: 0.3s;
+}
+
+/* Image container overlay effect */
+.package-card .position-relative {
+    overflow: hidden;
+}
+
+.package-card .position-relative::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.package-card:hover .position-relative::after {
+    opacity: 1;
+}
+
+/* Button focus state for accessibility */
+.package-card .btn-primary:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Price tag enhancement */
+.package-card .card-footer h4 {
+    transition: transform 0.2s ease;
+}
+
+.package-card:hover .card-footer h4 {
+    transform: scale(1.05);
+}
